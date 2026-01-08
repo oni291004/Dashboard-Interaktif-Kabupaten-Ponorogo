@@ -13,13 +13,13 @@ import logging
 st.set_page_config(page_title="Dashboard Interaktif Kabupaten Ponorogo", layout="wide")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s:%(message)s")
 
-st.title("Dashboard Interaktif Kabupaten Ponorogo — Auto Update")
+st.title("Dashboard Interaktif Kabupaten Ponorogo")
 
 # ================= PATH SETUP =================
-data_folder = "C:/Users/otnie/Latihan/.vscode/Database"
+data_folder = "Database"
 os.makedirs(data_folder, exist_ok=True)
 
-geojson_path = "C:/Users/otnie/Latihan/.vscode/35.02_Ponorogo/35.02_kecamatan.geojson"
+geojson_path = "35.02_Ponorogo/35.02_kecamatan.geojson"
 geojson_key = "nm_kecamatan"
 
 # ================= GEOJSON =================
@@ -253,4 +253,5 @@ st.dataframe(summary, use_container_width=True)
 
 # ================= TABLE =================
 st.subheader("Data Lengkap")
+
 st.dataframe(df, use_container_width=True)
